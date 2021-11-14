@@ -1,9 +1,9 @@
 #!/bin/bash
-# --------------------------------------------------------------------------------------------------------
+# ---------------------------------------------------------------------------------------------------------
 # W2L                                                                                                      
 # This script sets up a remote desktop protocol (RDP) server persistently.
-# The login info is printed aftersetup and need to be inserted in Windows 'Remote Desktop Connection' app
-# --------------------------------------------------------------------------------------------------------
+# The login info is printed after setup and need to be inserted in Windows 'Remote Desktop Connection' app.
+# ---------------------------------------------------------------------------------------------------------
 function caddy () {
     local pid=$!
     declare -a ani=("   🛒" "  🛒 " " 🛒  " "🛒   " "     ")
@@ -33,7 +33,7 @@ sudo systemctl enable --now xrdp
 highlight "Set TCP port ..."
 sudo ufw allow from any to any port 3389 proto tcp
 highlight "done."
-highlight "This host will be reachable through Windows RDP, connect after rebooting this machine via:\nUser: $(whoami)\nHost: $(hostname)"
+highlight "Connect after rebooting via Windows RDP:\nUser: $(whoami)\nHost: $(hostname)"
 highlight "Reboot system now [recommended]? (y/n)"
 read qreboot
 if [ $qreboot == "y" ]; then
