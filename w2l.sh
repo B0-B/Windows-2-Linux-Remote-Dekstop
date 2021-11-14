@@ -33,7 +33,7 @@ sudo systemctl enable --now xrdp
 highlight "Set TCP port ..."
 sudo ufw allow from any to any port 3389 proto tcp
 highlight "done."
-highlight "This host will be reachable through Windows RDP, connect via:\nUser: $(whoami)\nHost: $(hostname)"
+highlight "This host will be reachable through Windows RDP, connect after rebooting this machine via:\nUser: $(whoami)\nHost: $(hostname)"
 highlight "Reboot system now [recommended]? (y/n)"
 read qreboot
 if [ $qreboot == "y" ]; then
@@ -43,3 +43,4 @@ if [ $qreboot == "y" ]; then
 	done
 	sudo reboot
 fi
+highlight "W2L setup completed."
