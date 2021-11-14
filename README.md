@@ -1,5 +1,5 @@
 # Windows-2-Linux-Remote-Dekstop
-W2L sets up a xrdp server on a Linux machine for RDP connectivity in your network or world wide.
+W2L sets up a xrdp server on Linux which is reachable via Windows RDP.
 
 ## Linux Host
 Quick setup 
