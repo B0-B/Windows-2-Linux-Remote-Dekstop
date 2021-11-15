@@ -35,7 +35,7 @@ sudo ufw allow from any to any port 3389 proto tcp
 highlight "done."
 highlight "Connect after rebooting via Windows RDP:\nUser: $(whoami)\nHost: $(hostname)"
 highlight "Reboot system now [recommended]? (y/n)"
-read qreboot
+read qreboot &&
 if [ $qreboot == "y" ]; then
 	for i in 5 4 3 2 1
 	do
